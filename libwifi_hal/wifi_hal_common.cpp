@@ -163,6 +163,10 @@ int wifi_load_driver() {
     return 0;
   }
 
+#ifdef VENDOR_EDIT
+  get_mac_from_nv();
+#endif /* VENDOR_EDIT */
+
   if (insmod(DRIVER_MODULE_PATH, DRIVER_MODULE_ARG) < 0) return -1;
 #endif
 
