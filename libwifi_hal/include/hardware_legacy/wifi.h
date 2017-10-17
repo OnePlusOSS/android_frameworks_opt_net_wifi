@@ -57,6 +57,13 @@ const char *wifi_get_fw_path(int fw_type);
  */
 int wifi_change_fw_path(const char *fwpath);
 
+#ifdef VENDOR_EDIT
+/**
+ * Function to generate valid mac address.
+ */
+void get_mac_from_nv();
+#endif /* VENDOR_EDIT */
+
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
